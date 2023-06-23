@@ -1,0 +1,122 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color:#0e0e0e;
+}
+header{
+    display:flex;
+    flex-direction:column;
+    margin:0 auto;
+    background-image: url("/movielistpic.png");
+    width:550px;
+    height:208px;
+    background-size: cover;
+  
+}
+#film{
+    margin-top: 50px;
+    
+    padding:0px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+   margin-left:42px;
+    font-size:42.79px;
+    color:#ffffff;
+}
+#watchlist-button{
+    margin-top:5px;
+    margin-right:42px;
+    border:none;
+    background-color:transparent;
+    color:white;  
+    height:20px 
+}
+#search-bar-button{
+    display:flex;
+    justify-content: center;
+    border:0px;
+    margin-top: 36px;
+    padding:0px;
+}
+.search-input{
+    width:340px;
+    height:25px;
+    color:#a5a5a5;
+    background-color:#2e2e2f;
+    border:none;
+}
+#search-button{
+    color:#ffffff;
+    background-color:#4b4b4b;
+    border:0px;
+    width:120px;
+    margin:0px;
+    padding:0px;
+    font-size:12px;
+}
+#exploring-icon{
+    width:148px;
+    height:90px;
+    margin-top:190px;
+    
+}
+#movie-list{
+    width:462px;
+    margin:0 auto;
+    color:#ffffff;
+    
+}
+#new-movie-list{
+    display:flex;
+
+}
+#movie-poster{
+    margin-top:30px;
+    margin-right:30px;
+    width:99px;
+    height:147.41px;
+}
+#title-synopsis{
+    display:flex;
+    flex-direction:column;
+    text-align: start;
+    margin-top:10px;
+    
+}
+#movie-title-rating{
+   display:flex;
+   align-items: center;
+
+}
+#title{
+    font-size: 18px;
+    margin-right: 10px
+}
+#rating{
+   font-size:12px;
+}
+#watchlist-add-button{
+    width:100px;
+    height:30px;
+    background-color: transparent;
+    color:#ffffff;
+    border:none;
+}
+#time-genre-button{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -20px;
+    font-size: 12px;
+}
+
+#plot{
+    color:gray;
+    font-size:14px;
+}
