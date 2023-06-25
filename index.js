@@ -44,14 +44,20 @@ fetch(`https://www.omdbapi.com/?s=${search}&apikey=704fc511`)
         </div>
     </div>
 </div>`
-document.addEventListener("click", function(e) {
-    let bob = ""
-    bob += e.target.dataset.id
-    console.log(bob)
-        
-    })
-
 })}
 
 })
 }
+document.addEventListener("click", async function(e) {
+    
+    const movieId = e.target.dataset.id
+    
+    response = await fetch(
+        `https://www.omdbapi.com/?i=${movieId}&apikey=704fc511`
+    )
+    
+    const newData = await response.json()
+    console.log(movieId)
+    
+    localStorage.setItem(movieId,JSON.stringify(newData))
+})
