@@ -1,3 +1,4 @@
+function render(data){
 let newWatchlist = document.getElementById("updated-movie-list")
 newWatchlist.innerHTML = ``
 for (let i = 0; i < localStorage.length; i++){
@@ -7,6 +8,8 @@ for (let i = 0; i < localStorage.length; i++){
  fetch(`https://www.omdbapi.com/?i=${data}&apikey=704fc511`)
     .then(res => res.json())
     .then(data =>{ console.log(data)
+        
+   
 
 
 newWatchlist.innerHTML += 
@@ -28,4 +31,13 @@ newWatchlist.innerHTML +=
         </div>
     </div>
 </div>`
-})}
+})}}
+render()
+
+document.addEventListener("click", async function(e) {
+    
+    const movieId = e.target.dataset.id
+    localStorage.removeItem(movieId)
+    
+render()
+})

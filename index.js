@@ -1,7 +1,6 @@
-document.getElementById("watchlist-button").addEventListener("click", function(){
-    document.body.innerHTML = `a href = "watchlist.html"`
-    
-})
+
+
+
 
 
 let search = document.getElementById("search-input").value
@@ -17,10 +16,16 @@ movieList.innerHTML = ``
 fetch(`https://www.omdbapi.com/?s=${search}&apikey=704fc511`)
     .then(res => res.json())
     .then(data =>{ 
+        if(data.Response === 'False'){
+        movieList.innerHTML = 
+        `<p id = "no-response">
+          Unable to find what you are looking for. Please try another search.
+        </p>`}
+        else{
         let movieArray = data.Search
         for(i=0; i < movieArray.length; i++){
         let imdbId = movieArray[i].imdbID
-
+          
     fetch(`https://www.omdbapi.com/?i=${imdbId}&apikey=704fc511`)
     .then(res => res.json())
     .then(data =>{ console.log(data)
@@ -44,7 +49,7 @@ fetch(`https://www.omdbapi.com/?s=${search}&apikey=704fc511`)
         </div>
     </div>
 </div>`
-})}
+})}}
 
 })
 }
