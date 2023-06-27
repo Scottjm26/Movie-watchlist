@@ -1,8 +1,5 @@
 
 
-
-
-
 let search = document.getElementById("search-input").value
 document.getElementById("search-input").onchange = function() {
   search = this.value;
@@ -19,7 +16,7 @@ fetch(`https://www.omdbapi.com/?s=${search}&apikey=704fc511`)
         if(data.Response === 'False'){
         movieList.innerHTML = 
         `<p id = "no-response">
-          Unable to find what you are looking for. Please try another search.
+          Unable to find what you're looking for. Please try another search.
         </p>`}
         else{
         let movieArray = data.Search
@@ -56,7 +53,6 @@ fetch(`https://www.omdbapi.com/?s=${search}&apikey=704fc511`)
 document.addEventListener("click", async function(e) {
     
     const movieId = e.target.dataset.id
-    
     response = await fetch(
         `https://www.omdbapi.com/?i=${movieId}&apikey=704fc511`
     )
